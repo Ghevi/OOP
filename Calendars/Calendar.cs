@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Calendars;
 
-internal abstract class Calendar
+abstract class Calendar
 {
     public abstract bool IsLeapYear(int year);
     public abstract bool IsLeapDay(int month, int day);
