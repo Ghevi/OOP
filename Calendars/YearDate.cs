@@ -8,9 +8,9 @@ class YearDate
 
     public YearDate(Calendar calendar, int month, int day)
     {
+        _calendar = calendar;
         _month = month;
         _day = day;
-        _calendar = calendar;
     }
 
     public YearDate GetNext() =>
