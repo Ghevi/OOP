@@ -26,7 +26,6 @@ class Date
         GetFirstDayOccurrence(_year, day._day);
 
     private bool IsLeap(int year) => _calendar.IsLeapYear(year);
-        //
 
     public Date GetFirstOccurrence(YearDate day) =>
         GetFirstDayOccurrence(day.IsBefore(_day) ? _year + 1 : _year, day);
