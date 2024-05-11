@@ -6,7 +6,7 @@ class YearDate
     private int _day;
     private Calendar _calendar;
 
-    public YearDate(int month, int day, Calendar calendar)
+    public YearDate(Calendar calendar, int month, int day)
     {
         _month = month;
         _day = day;
@@ -14,8 +14,8 @@ class YearDate
     }
 
     public YearDate GetNext() =>
-        IsEndOfMonth() ? new YearDate(_calendar.NextMonth(_month), 1, _calendar)
-        : new YearDate(_month, _day + 1, _calendar);
+        IsEndOfMonth() ? new YearDate(_calendar, _calendar.NextMonth(_month), 1)
+        : new YearDate(_calendar, _month, _day + 1);
 
     private bool IsEndOfMonth() =>
         _day == _calendar.DaysInMonth(_month);

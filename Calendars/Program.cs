@@ -11,18 +11,17 @@ static void Report(Child child, SchoolSystem school)
 Calendar calendar = new GregorianCalendar();
 
 SchoolSystem school = new SchoolSystem(
-    new YearDate(3, 1, calendar),
+    new YearDate(calendar, 3, 1),
     5,
-    new YearDate(8, 15, calendar));
+    new YearDate(calendar, 8, 15));
 
 Child jill = new Child(
     "Jill",
-    new Date(2016, new YearDate(2, 29, calendar),
-    calendar));
+    new Date(calendar, 2016, new YearDate(calendar, 2, 29)));
+
 Child jake = new Child(
     "Jake",
-    new Date(2015, new YearDate(8, 27, calendar),
-    calendar));
+    new Date(calendar, 2015, new YearDate(calendar, 8, 27)));
 
 Report(jill, school);
 Report(jake, school);
